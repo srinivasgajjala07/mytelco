@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Customer Churn Prediction Result</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+
+body{
+    background-color:hsl(300,3%,87%);
+    margin:0;
+
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+    background-color:#0c131a;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+header nav{
+    margin-top:10px;
+}
+
+header nav a{
+    color:red;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* MAIN CONTENT */
+
+main{
+    flex:1;
+}
+
+/* RESULT CARD */
+
+.result-container{
+    background-color:#cfd2d0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    padding:20px;
+    margin:80px auto;
+    width:40%;
+}
+
+.result-text{
+    font-weight:bold;
+    text-align:center;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color:#0c131a;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<h2>Telco Customer Churn Prediction System</h2>
+
+<nav>
+<a href="/">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="exit.html">Exit</a>
+</nav>
+
+</header>
+
+<main>
+
+<div class="container result-container">
+
+<h1 class="result-text">{{ result }}</h1>
+
+<div class="text-center">
+
+<a href="project.html" class="btn btn-success">Predict Another</a>
+
+<a href="/" class="btn btn-primary">Back to Home</a>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>© 2023 Telco Customer Churn Prediction</p>
+
+</footer>
+
+</body>
+</html>
