@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <title>Customer Churn Prediction</title>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <style>
-body {
-    background-color: hsl(300, 3%, 87%);
+
+/* BODY LAYOUT FIX */
+body{
+    background-color:hsl(300,3%,87%);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 /* HEADER */
@@ -34,28 +39,33 @@ header nav a{
     font-weight:bold;
 }
 
+/* MAIN CONTENT */
+main{
+    flex:1;
+}
+
 /* FORM */
-.form-container {
-    background-color: #cfd2d2;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 50px auto;
-    width: 40%;
+.form-container{
+    background-color:#cfd2d2;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    padding:20px;
+    margin:50px auto;
+    width:40%;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.form-group{
+    margin-bottom:20px;
 }
 
-.form-label {
-    font-weight: bold;
+.form-label{
+    font-weight:bold;
 }
 
-.btn-predict {
-    background-color: #0fb0cc;
-    color: #ffffff;
-    width: 100%;
+.btn-predict{
+    background-color:#0fb0cc;
+    color:#ffffff;
+    width:100%;
 }
 
 /* FOOTER */
@@ -65,13 +75,13 @@ footer{
     text-align:center;
     padding:10px;
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
-<!-- HEADER WITH NAVIGATION -->
+<!-- HEADER -->
 
 <header>
 
@@ -86,6 +96,8 @@ footer{
 
 </header>
 
+<!-- MAIN CONTENT -->
+
 <main>
 
 <div class="container form-container">
@@ -95,23 +107,23 @@ footer{
 <form id="churn-form" action="/predict" method="POST">
 
 <div class="form-group">
-<label class="form-label" for="tenure">Tenure:</label>
-<input type="number" class="form-control" id="tenure" name="tenure" required>
+<label class="form-label">Tenure:</label>
+<input type="number" class="form-control" name="tenure" required>
 </div>
 
 <div class="form-group">
-<label class="form-label" for="monthly_charges">Monthly Charges:</label>
-<input type="number" class="form-control" id="monthly_charges" name="MonthlyCharges" required>
+<label class="form-label">Monthly Charges:</label>
+<input type="number" class="form-control" name="MonthlyCharges" required>
 </div>
 
 <div class="form-group">
-<label class="form-label" for="total_charges">Total Charges:</label>
-<input type="number" class="form-control" id="total_charges" name="TotalCharges" required>
+<label class="form-label">Total Charges:</label>
+<input type="number" class="form-control" name="TotalCharges" required>
 </div>
 
 <div class="form-group">
-<label class="form-label" for="contract">Contract:</label>
-<select class="form-control" id="contract" name="Contract">
+<label class="form-label">Contract:</label>
+<select class="form-control" name="Contract">
 <option value="0">Month-to-Month</option>
 <option value="1">One Year</option>
 <option value="2">Two Year</option>
@@ -119,8 +131,8 @@ footer{
 </div>
 
 <div class="form-group">
-<label class="form-label" for="online_security">Online Security:</label>
-<select class="form-control" id="online_security" name="OnlineSecurity">
+<label class="form-label">Online Security:</label>
+<select class="form-control" name="OnlineSecurity">
 <option value="0">No</option>
 <option value="1">Yes</option>
 <option value="2">No internet service</option>
@@ -128,8 +140,8 @@ footer{
 </div>
 
 <div class="form-group">
-<label class="form-label" for="tech_support">Tech Support:</label>
-<select class="form-control" id="tech_support" name="TechSupport">
+<label class="form-label">Tech Support:</label>
+<select class="form-control" name="TechSupport">
 <option value="0">No</option>
 <option value="1">Yes</option>
 <option value="2">No internet service</option>
@@ -137,8 +149,8 @@ footer{
 </div>
 
 <div class="form-group">
-<label class="form-label" for="device_protection">Device Protection:</label>
-<select class="form-control" id="device_protection" name="DeviceProtection">
+<label class="form-label">Device Protection:</label>
+<select class="form-control" name="DeviceProtection">
 <option value="0">No</option>
 <option value="1">Yes</option>
 <option value="2">No internet service</option>
@@ -146,8 +158,8 @@ footer{
 </div>
 
 <div class="form-group">
-<label class="form-label" for="internet_service">Internet Service:</label>
-<select class="form-control" id="internet_service" name="InternetService">
+<label class="form-label">Internet Service:</label>
+<select class="form-control" name="InternetService">
 <option value="1">DSL</option>
 <option value="2">Fiber Optic</option>
 <option value="0">No</option>
@@ -166,7 +178,7 @@ footer{
 
 <footer>
 
-<p>© 2023 Telco Customer Churn Prediction </p>
+<p>© 2023 Telco Customer Churn Prediction</p>
 
 </footer>
 
